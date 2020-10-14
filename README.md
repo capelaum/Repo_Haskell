@@ -1,8 +1,4 @@
 # Haskell
-Exercícios de códigos feitos em Haskell - Hugs98
+Exercícios de códigos feitos em Haskell (Hugs98) - Contem alguns materiais de estudo 
 
-Some Coding exercises in Haskell - Hugs98
-
-Contem alguns materiais de estudo 
-
-Contains some study materials
+Some Coding exercises in Haskell (Hugs98) - Contains some study materials
