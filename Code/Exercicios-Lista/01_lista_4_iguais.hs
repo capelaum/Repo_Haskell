@@ -1,5 +1,5 @@
 iguais_4 :: [Int] -> Bool
-iguais_4 list 
+iguais_4 list
   | length list == 4 = iguais list
   | otherwise = False
 
@@ -7,15 +7,15 @@ iguais_4 list
 iguais :: [Int] -> Bool
 iguais [] = True
 iguais [_] = True
-iguais (x:xs) = x == (head xs) && iguais xs 
+iguais (x:xs) = x == (head xs) && iguais xs
 
 
-{- 
+{-
   1. Verificar se em uma lista de 4 elementos, todos sao iguais, retorna bool
-  - Verifique se possui 4 elementos 
+  - Verifique se possui 4 elementos
   - Verifique se todos elementos sao iguais
 
-  ] -> False
+  [] -> False
   [1] -> False
   [0,0,0,0] -> True
 
