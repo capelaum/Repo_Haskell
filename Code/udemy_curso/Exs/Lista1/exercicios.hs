@@ -3,8 +3,8 @@ import Data.List
 questao1 :: Int -> [Int] -> [Int]
 questao1 _ [] = []
 questao1 n (x:xs)
-	| ((x > n) && ((mod x 3) == 0)) = x:(questao1 n xs)
-	| otherwise = questao1 n xs
+  | x > n && mod x 3 == 0 = x:questao1 n xs
+  | otherwise = questao1 n xs
 
 
 questao2 :: Int -> [t] -> [t]
@@ -31,15 +31,16 @@ fib 3 = 1
 fib n = fib (n - 1) + fib (n - 2)
 
 
-get_fib_numbers :: Int -> [Int]
-get_fib_numbers n = [(fib x) | x <- [1 .. n]]
+getFibNumbers :: Int -> [Int]
+getFibNumbers n = [fib x | x <- [1 .. n]]
 
 
 questao4 :: IO ()
 questao4 = do
-		putStr "Digite um numero: "
-		num <- getLine
-		if (is_prime (read num)) == True
-			then do
-				putStrLn ("Eh primo!" ++ " Fatorial: " ++ (show (fat (read num))) ++ "; Fibonacci: " ++ (show (get_fib_numbers (fat (read num)))))
-			else do putStrLn ("Nao eh primo!" ++ " Fatorial: " ++ (show (fat (read num))) ++ "; Fibonacci: " ++ (show (get_fib_numbers (fat (read num)))))
+  putStr "Digite um numero: "
+  num <- getLine
+	if (is_prime (read num)) == True
+  then do
+		putStrLn ("Eh primo!" ++ " Fatorial: " ++ (show (fat (read num))) ++ "; Fibonacci: " ++ (show (get_fib_numbers (fat (read num)))))
+	else do
+		putStrLn ("Nao eh primo!" ++ " Fatorial: " ++ (show (fat (read num))) ++ "; Fibonacci: " ++ (show (get_fib_numbers (fat (read num)))))
