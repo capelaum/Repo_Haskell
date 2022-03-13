@@ -1,13 +1,13 @@
 module ParImpar (ehPar) where
 
 ehPar :: Int -> Bool
-ehPar n 
-  | (mod n 2 == 0 ) = True
+ehPar n
+  | even n = True
   | otherwise = False
 
 ehImpar :: Int -> Bool
-ehImpar n 
-  | (mod n 2 /= 0 ) = True
+ehImpar n
+  | odd n = True
   | otherwise = False
 
 -- Utilizado no 20_IO.hs

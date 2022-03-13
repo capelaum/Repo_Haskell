@@ -1,27 +1,30 @@
-type Nome = String 
+type Nome = String
+
 type Linguagem = String
+
 type Universidade = String
 
 data Pessoa = Programador Nome Linguagem | Aluno Nome Universidade
-  deriving(Show)
+  deriving (Show)
 
 programador = Programador "Luis" "PHP"
+
 aluno = Aluno "Luis" "UnB"
 
 programador2 = Programador "Marcos" "Haskell"
+
 aluno2 = Aluno "Marcos" "UFPI"
 
-is_programador :: Pessoa -> Bool
-is_programador (Programador _ _ ) = True
-is_programador _ = False
+isProgramador :: Pessoa -> Bool
+isProgramador (Programador _ _) = True
+isProgramador _ = False
 
-is_aluno :: Pessoa -> Bool
-is_aluno (Aluno _ _ ) = True
-is_aluno _ = False
+isAluno :: Pessoa -> Bool
+isAluno (Aluno _ _) = True
+isAluno _ = False
 
-
-{- 
-  * Tipos algebricos - data var
+{-
+  * Tipos algebricos - data variaable
 
   Similares a Structs
 -}

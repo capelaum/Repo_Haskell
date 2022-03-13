@@ -1,10 +1,8 @@
-my_length :: [a] -> Int
-my_length [] = 0
-my_length (x:xs) = 1 + my_length xs
+myLength :: [a] -> Int
+myLength = foldr (\x -> (+) 1) 0
 
 {-
-  * Função length utiliza polimorfismo
-  Retorna tamanho de lista de qualquer tipo
+  Função length utiliza polimorfismo
+  Pois retorna tamanho de lista de qualquer tipo
   :t length -> length :: [a] -> Int
-
 -}
