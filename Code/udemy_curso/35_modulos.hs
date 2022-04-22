@@ -1,4 +1,4 @@
-module ParImpar (ehPar) where
+module ParImpar where
 
 ehPar :: Int -> Bool
 ehPar n
